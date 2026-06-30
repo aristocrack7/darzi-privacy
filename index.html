@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy &middot; darzi</title>
+<meta name="description" content="How darzi collects, uses, and protects your information.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #F7F3ED;
+    --bone: #EEE7DB;
+    --stone: #C8BFAF;
+    --graphite: #2B2824;
+    --ink: #0F0E0C;
+    --oxblood: #5A1A1A;
+    --gilt: #A88A4F;
+    --hairline: #B89A5C;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    background: var(--ivory);
+    color: var(--graphite);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 72px 24px 96px;
+  }
+
+  /* Masthead */
+  .masthead {
+    border-bottom: 1px solid var(--hairline);
+    padding-bottom: 28px;
+    margin-bottom: 48px;
+  }
+
+  .wordmark {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    line-height: 1;
+    display: inline-block;
+  }
+
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gilt);
+    margin-top: 22px;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-top: 10px;
+  }
+
+  .updated {
+    font-size: 13px;
+    color: var(--stone);
+    margin-top: 18px;
+    letter-spacing: 0.01em;
+  }
+
+  /* Standfirst */
+  .standfirst {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--graphite);
+    margin-bottom: 56px;
+  }
+
+  /* Sections */
+  section { margin-bottom: 44px; }
+
+  h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--oxblood);
+    margin-bottom: 16px;
+  }
+
+  p { margin-bottom: 14px; max-width: 60ch; }
+  p:last-child { margin-bottom: 0; }
+
+  strong { font-weight: 600; color: var(--ink); }
+
+  a {
+    color: var(--oxblood);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gilt);
+    padding-bottom: 1px;
+  }
+  a:hover { color: var(--ink); }
+  a:focus-visible {
+    outline: 2px solid var(--oxblood);
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  /* Definition list for the "what we collect" register */
+  .ledger {
+    border-top: 1px solid var(--hairline);
+    margin-top: 4px;
+  }
+  .ledger .row {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .ledger .term {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ink);
+    letter-spacing: 0.01em;
+  }
+  .ledger .desc {
+    font-size: 15px;
+    color: var(--graphite);
+    line-height: 1.55;
+  }
+
+  /* The "what we don't do" block — the distinctive, trust-building beat */
+  .restraint {
+    background: var(--bone);
+    border-left: 2px solid var(--oxblood);
+    padding: 28px 28px 26px;
+    margin-bottom: 44px;
+  }
+  .restraint h2 { margin-bottom: 14px; }
+  .restraint p { font-size: 15px; }
+
+  /* Contact */
+  .contact-line { font-size: 15px; }
+
+  /* Colophon */
+  .colophon {
+    border-top: 1px solid var(--hairline);
+    margin-top: 64px;
+    padding-top: 28px;
+    font-size: 13px;
+    color: var(--stone);
+    line-height: 1.6;
+  }
+  .colophon .mark {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+    color: var(--gilt);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 520px) {
+    .page { padding: 52px 22px 72px; }
+    h1 { font-size: 32px; }
+    .standfirst { font-size: 19px; }
+    .ledger .row { grid-template-columns: 1fr; gap: 5px; padding: 14px 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+</style>
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <span class="wordmark">darzi</span>
+      <div class="eyebrow">Privacy</div>
+      <h1>What we hold, and what we do not.</h1>
+      <div class="updated">Last updated 24 June 2026</div>
+    </header>
+
+    <p class="standfirst">darzi exists to bring a private craft into a considered space. That trust begins with restraint &mdash; we collect only what a commission requires, and nothing it does not.</p>
+
+    <section>
+      <h2>What we collect</h2>
+      <p>When you request an appointment through the darzi app, we collect the details needed to arrange and honour that visit:</p>
+      <div class="ledger">
+        <div class="row">
+          <div class="term">Your name</div>
+          <div class="desc">So the atelier knows who they are attending.</div>
+        </div>
+        <div class="row">
+          <div class="term">Mobile number</div>
+          <div class="desc">To confirm your appointment and reach you about your commission.</div>
+        </div>
+        <div class="row">
+          <div class="term">Address</div>
+          <div class="desc">So a master tailor can attend your home for the visit.</div>
+        </div>
+        <div class="row">
+          <div class="term">Booking details</div>
+          <div class="desc">The service requested, your chosen atelier, and the date and time of your appointment.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>How we use it</h2>
+      <p>Your information is used to arrange your appointment, to let your chosen atelier prepare for the visit, and to keep you informed about your commission. The atelier receives only what it needs to attend you &mdash; your name, your general area, and the appointment time. Your full address is held in the app as the record of the booking; it is not shared in messages.</p>
+    </section>
+
+    <section>
+      <h2>Where it is held</h2>
+      <p>Your booking is stored securely with <strong>Supabase</strong>, our database provider. Appointment notifications are sent to the atelier through <strong>Twilio</strong>, which carries the message on our behalf. These providers process your information solely to deliver the service, under their own data protections, and not for any purpose of their own.</p>
+    </section>
+
+    <div class="restraint">
+      <h2>What we do not do</h2>
+      <p>We do not sell your information. We do not share it with advertisers. darzi does not use your details to market unrelated products to you, and places no tracking on you beyond what the booking itself requires. Discretion is the point of darzi, not a setting you have to find. Should any of this ever change, we will say so plainly and ask your permission first.</p>
+    </div>
+
+    <section>
+      <h2>Keeping and removing your information</h2>
+      <p>We hold your details for as long as you keep an account and a record of your commissions with us. If you would like your information removed, write to us and we will delete it, save for anything we are required to retain.</p>
+    </section>
+
+    <section>
+      <h2>Your control</h2>
+      <p>You may ask us at any time what we hold about you, request a correction, or ask us to delete it. We will answer in good faith and without friction.</p>
+    </section>
+
+    <section>
+      <h2>Changes to this policy</h2>
+      <p>We may update this policy as darzi grows or as the law requires. If we make a material change to how your information is used, we will tell you &mdash; within the app or by writing to you &mdash; before that change takes effect, so the choice to continue remains yours.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p class="contact-line">For anything concerning your privacy, or to make a request about your information, write to <a href="mailto:darzi.pk1@gmail.com">darzi.pk1@gmail.com</a>.</p>
+    </section>
+
+    <footer class="colophon">
+      <span class="mark">darzi</span>
+      Private-atelier bespoke tailoring. This policy describes our practices for the darzi iOS application and will be updated as the service grows; the date above marks the current version.
+    </footer>
+  </main>
+</body>
+</html>
